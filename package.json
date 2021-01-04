@@ -1,0 +1,31 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "init": "jest --init",
+    "test-question-one": "jest question-one/tests",
+    "test-question-one:dev": "jest question-one/tests --watch",
+    "transpile-one": "babel ./question-one/solution --out-dir dist-question-one",
+    "question-one": "npm run transpile-one && node dist-question-one",
+    "test-question-four": "jest question-four/tests",
+    "test-question-four:dev": "jest question-four/tests --watch",
+    "transpile-four": "babel ./question-four/solution --out-dir dist-question-four",
+    "question-four": "npm run transpile-four && node dist-question-four",
+    "test-question-ten": "jest question-ten/tests",
+    "test-question-ten:dev": "jest question-ten/tests --watch",
+    "transpile-ten": "babel ./question-ten/solution --out-dir dist-question-ten",
+    "question-ten": "npm run transpile-ten && node dist-question-ten"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-env": "^7.9.6",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1"
+  }
+}
